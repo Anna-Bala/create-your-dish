@@ -2,12 +2,12 @@ import { combineReducers } from 'redux';
 
 const INITIAL_STATE_FORM = {
     name: '',
-    preparation_time: undefined,
+    preparation_time: '',
     type: 'pizza',
-    no_of_slices: undefined,
-    diameter: undefined,
+    no_of_slices: '',
+    diameter: '',
     spiciness_scale: 1,
-    slices_of_bread: undefined
+    slices_of_bread: ''
 };
 
 const INITIAL_STATE_RESPONSE = [];

@@ -29,6 +29,10 @@ select:focus {
   border-style: solid;
 }
 
+input[type="range"] {
+  border: none;
+}
+
 hr {
   border-style: solid;
   border-color: #54d08e;
@@ -44,14 +48,20 @@ button:hover {
   cursor: pointer;
 }
 
-.main {
-  background-color: #54d08e;
-  width: 100vw;
-  height: 100vh;
+.main,
+.formContainer,
+.ordersContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
+  text-align: center;
+}
+
+.main {
+  background-color: #54d08e;
+  width: 100vw;
+  height: 100vh;
 }
 
 .formContainer {
@@ -60,11 +70,6 @@ button:hover {
   height: 50vh;
   padding: 10px;
   border-radius: 50px;
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  justify-content: center;
-  align-content: center;
 }
 
 .ordersContainer {
@@ -74,9 +79,10 @@ button:hover {
   padding: 30px;
   margin-left: 30px;
   border-radius: 50px;
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
   justify-content: flex-start;
   align-content: flex-start;
+}
+
+.order {
+  width: 100%;
 }

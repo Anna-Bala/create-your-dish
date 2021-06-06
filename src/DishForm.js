@@ -27,11 +27,9 @@ const handleSubmit = (e, dishForm, responseSuccess, responseError) => {
             const isJson = response.headers.get('content-type')?.includes('application/json');
             const data = isJson && await response.json();
             if (!response.ok) {
-                console.log(data);
                 return Promise.reject(data);
-            }
-
-            console.log(data);
+            };
+            
             responseSuccess(data);
         })
         .catch(data => {
@@ -121,7 +119,7 @@ export const DishForm = (props) => {
             </div>
             <div className="ordersContainer">
                 <h2>Your orders:</h2>
-                {props.orders.map(order => {
+                {props.orders.map((order, index) => {
                     let content = null;
 
                     switch(order.type) {
@@ -132,8 +130,8 @@ export const DishForm = (props) => {
                     }
 
                     return (
-                    <div key={order.id}>
-                        <p>ID: {order.id} Name: {order.name}</p>
+                    <div key={index} className="order">
+                        <p>ID: {index} Name: {order.name}</p>
                         {content}
                         <hr/>
                     </div>
