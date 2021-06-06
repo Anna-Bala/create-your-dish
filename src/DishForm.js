@@ -132,6 +132,7 @@ export const DishForm = (props) => {
                     return (
                     <div key={index} className="order">
                         <p>ID: {index} Name: {order.name}</p>
+                        <p>Preparation time: {order.preparation_time}</p>
                         {content}
                         <hr/>
                     </div>
